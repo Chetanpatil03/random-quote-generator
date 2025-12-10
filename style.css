@@ -1,0 +1,170 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: #5372f0;  */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background: #121212;; */
+}
+
+.wrapper{
+    /* width: 50%; */
+    /* max-width: 700px; */
+    width: 650px;
+    background: #fff;
+    /* background: #1E1E1E; */
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+    color: #333333;
+}
+
+.container{
+    /* width: 50%; */
+    /* max-width: 700px; */
+    /* width: 600px; */
+    /* width: 600px;  */
+    /* background: #fff; */
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+}
+
+.wrapper header{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .content{
+    margin: 35px 0;
+}
+
+.content .quote-area{
+    display: flex;
+    justify-content: center;
+}
+
+.quote-area i{
+    font-size: 15px;
+}
+
+.quote-area i:first-child{
+    margin: 3px 10px 0 0;
+}
+
+.quote-area i:last-child{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 3px 10px;
+}
+
+.quote-area .quote{
+    font-size: 22px;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.content .author{
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    margin-top: 20px;
+    font-style: italic;
+    color: #666666;
+}
+
+.author span:first-child {
+    margin: -5px 5px 0 0;
+    font-family: monospace; 
+}
+
+.wrapper .buttons{
+    border-top: 1px solid #ccc;
+}
+
+.buttons .features{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.features ul{
+    display: flex;
+}
+.features ul li{
+    list-style: none;
+    margin: 0 5px;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    /* border: 2px solid #5372f0; */
+    border: 2px solid #764ba2;
+    /* color: #5372f0; */
+    color:#764ba2;
+    border-radius: 40%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.features ul li:hover{
+    color: #fff;
+    background-color: #764ba2;
+}
+
+.features button{
+    border: none;
+    outline: none;
+    /* background: #5372f0; */
+    background: #764ba2;;
+    /* color: #fff; */
+    color: #FFFFFF;
+    border: #764ba2;
+    padding: 13px 22px;
+    border-radius: 20px;
+    /* width: 20vh; */
+    width: auto;
+    font-style: 25px;
+    cursor: pointer;
+}
+
+button .loading{
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+
+#toast {
+    visibility: hidden; /* Hidden by default */
+    min-width: 250px;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed; /* Stays in place even if you scroll */
+    z-index: 1; /* Sit on top of everything */
+    left: 50%;
+    bottom: 30px; /* Distance from bottom */
+    transform: translateX(-50%); /* Center it perfectly */
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s; /* Smooth fade effect */
+}
+
+/* This class will be added by JavaScript */
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px; /* Small slide-up animation */
+}
